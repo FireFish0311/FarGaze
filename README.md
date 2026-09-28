@@ -10,9 +10,15 @@
 
 ## 下载与安装
 
-### 获取模组与依赖
+### 方案一：通过模组管理器安装
 
-下载 `FarGaze-0.5.1.zip` 作为模组本体。它不包含依赖；依赖可以通过模组管理器自动安装、从下表逐个下载，或者一次下载 `FarGaze-0.5.1-dependencies.zip`。依赖项包内是六个原始压缩包，并附有放置说明。
+打开 [远眺的 Thunderstore 页面](https://thunderstore.io/c/hollow-knight-silksong/p/FireFish/FarGaze/)，点击 **Install with Mod Manager**。如果尚未安装管理器，可先安装 [Thunderstore Mod Manager](https://get.thunderstore.io/)。在管理器中选择《空洞骑士：丝之歌》和要使用的配置档，安装远眺及其依赖，然后从该配置档启动游戏。管理器会处理模组本体和依赖，不需要再下载或手动放置 GitHub 上的 ZIP。
+
+### 方案二：完全手动安装（以 Windows 为例）
+
+打开 [GitHub v0.5.1 Release](https://github.com/FireFish0311/FarGaze/releases/tag/v0.5.1)，在 **Assets** 中下载 [`FarGaze-0.5.1.zip`](https://github.com/FireFish0311/FarGaze/releases/download/v0.5.1/FarGaze-0.5.1.zip) 作为模组本体。
+
+模组本体包不包含依赖。尚未安装的依赖可从下表逐个下载，也可从同一 Release 下载 [`FarGaze-0.5.1-dependencies.zip`](https://github.com/FireFish0311/FarGaze/releases/download/v0.5.1/FarGaze-0.5.1-dependencies.zip)。依赖项包内是六个原始压缩包，并附有放置说明；已有对应版本的组件无需重复安装。
 
 | 组件 | 用途 | 本版本使用的版本 |
 |---|---|---|
@@ -23,9 +29,7 @@
 | [MonoDetour BepInEx 5](https://thunderstore.io/c/hollow-knight-silksong/p/MonoDetour/MonoDetour_BepInEx_5/) | ModMenu 所需组件 | 0.7.15 |
 | [MonoDetour](https://thunderstore.io/c/hollow-knight-silksong/p/MonoDetour/MonoDetour/) | 上一组件所需的库 | 0.7.15 |
 
-**使用模组管理器：** 在 [Thunderstore Mod Manager](https://get.thunderstore.io/) 中选择《丝之歌》，安装 ModMenu；选择“安装模组及依赖”后，管理器会一并下载它所需的组件。然后解压 `FarGaze-0.5.1.zip`，把其中的 `FarGaze` 文件夹放入当前配置档的 `BepInEx/plugins/`，最后通过管理器启动游戏。
-
-**手动安装（以下以 Windows 为例）：** 可以从上表逐个打开页面，选择“手动下载”；也可以解压 `FarGaze-0.5.1-dependencies.zip`，从其中的 `packages/` 取出需要的组件压缩包。依赖项包的外层文件夹不能直接放进游戏目录，各组件还需分别解压。在 Steam 中打开《丝之歌》的本地文件目录，然后按以下位置放置：
+可以从上表逐个打开页面，选择“手动下载”；也可以解压 `FarGaze-0.5.1-dependencies.zip`，从其中的 `packages/` 取出需要的组件压缩包。依赖项包的外层文件夹不能直接放进游戏目录，各组件还需分别解压。在 Steam 中打开《丝之歌》的本地文件目录，然后按以下位置放置：
 
 1. 解压 BepInExPack，将压缩包内 **`BepInExPack` 文件夹中的内容** 放到游戏根目录，也就是与游戏可执行文件同一层。启动一次游戏后退出。
 2. 解压其余依赖。将 ModMenu、UnityHelper、WavLib 的 DLL 放入 `BepInEx/plugins/`（可以各自建立子文件夹）；将 MonoDetour 两个压缩包中的 `core/` 和 `patchers/` 文件分别放入 `BepInEx/core/` 和 `BepInEx/patchers/`。
