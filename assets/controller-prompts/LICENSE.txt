@@ -1,0 +1,8 @@
+Controller prompt icons by xelu
+Source: https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack
+License: CC0 1.0 Universal
+License text: https://creativecommons.org/publicdomain/zero/1.0/
+
+Only the PNG files needed by Far Gaze are embedded in the plugin assembly.
+PlayStation face-button symbols are not included in the OpenGameArt download;
+Far Gaze uses Silksong's existing runtime button sprites for those controls.

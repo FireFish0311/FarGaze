@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>FarGaze</AssemblyName>
+    <RootNamespace>FarGaze</RootNamespace>
+    <Version>0.5.1</Version>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <PathMap Condition="'$(Configuration)' == 'Release'">$(MSBuildProjectDirectory)=/src</PathMap>
+    <NoWarn>$(NoWarn);MSB3270</NoWarn>
+  </PropertyGroup>
+
+  <!-- Build-only references; the release contains only FarGaze.dll. -->
+  <ItemGroup>
+    <Compile Remove="decompiled\**\*.cs" />
+    <EmbeddedResource Include="assets\controller-prompts\*.png">
+      <LogicalName>FarGaze.Assets.ControllerPrompts.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <Reference Include="BepInEx">
+      <HintPath>.packages/bepinex-baselib/lib/netstandard2.0/BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>.references/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Silksong.ModMenu">
+      <HintPath>.dependencies/ModMenu-0.7.6/Silksong.ModMenu.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Silksong.UnityHelper">
+      <HintPath>.dependencies/UnityHelper-1.2.0/UnityHelper.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>.gamelibs/ref/netstandard2.1/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>.gamelibs/ref/netstandard2.1/Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="TeamCherry.TK2D">
+      <HintPath>.gamelibs/ref/netstandard2.1/TeamCherry.TK2D.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>.packages/unityengine-modules/lib/netstandard2.0/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>.packages/unityengine-modules/lib/netstandard2.0/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>.packages/unityengine-modules/lib/netstandard2.0/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>.packages/unityengine-modules/lib/netstandard2.0/UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>.packages/unityengine-modules/lib/netstandard2.0/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>.packages/unityengine-modules/lib/netstandard2.0/UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>.gamelibs/ref/netstandard2.1/UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+# Local build outputs and private reference libraries are never part of releases.
+bin/
+obj/
+obj-offline/
+.build/
+.dependencies/
+.gamelibs/
+.packages/
+.references/
+decompiled/
+dist/
+SilksongPath.props
+*.nupkg
+*.zip
+*.user
+.vs/

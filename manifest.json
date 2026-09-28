@@ -1,0 +1,10 @@
+{
+  "name": "FarGaze",
+  "version_number": "0.5.1",
+  "website_url": "",
+  "description": "Turn toward the background while standing still, with a smooth transition that clears and restores background blur.",
+  "dependencies": [
+    "silksong_modding-BepInExPack_Silksong-1.0.3",
+    "silksong_modding-ModMenu-0.7.6"
+  ]
+}
