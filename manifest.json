@@ -1,7 +1,7 @@
 {
   "name": "FarGaze",
   "version_number": "0.5.1",
-  "website_url": "",
+  "website_url": "https://github.com/FireFish0311/FarGaze",
   "description": "Turn toward the background while standing still, with a smooth transition that clears and restores background blur.",
   "dependencies": [
     "silksong_modding-BepInExPack_Silksong-1.0.3",
